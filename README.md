@@ -253,13 +253,6 @@ z = reg.score(X_test, y_test)
 print("Accuracy score: ",z)
 ```
 
-## Results <br/>
-&emsp;We create four models for this dataset. The first one is linear regression with SGD. The testing error is 224.7 and the model score is 0.85. The features air time, distance, and departure delay hold the largest three weight magnitude. The second model we choose is the polynominal regression. We set the degree equals to 3. Now, the testing MSE error reduces to 131.64. 
-
-&emsp;We then choose Lasso regession with and without random selection to train and test our dataset. The testing MSE errors are 145.9 and 194.7 respectively. The model scores are 0.90 and 0.87 respectively. We think the Lasso regression with random selection model had a good performance on predicting. But we run Ridge regression to see if it performs better than the previous ones. 
-
-&emsp;The testing MSE error for Ridge regression is 144.6 and the accuracy score is 0.904. We think this model has the best performance and choose its reuslts as the final results. We print out the model weights for all features and find the biggest three weights by comparing their magnitudes. The corresponding features are departure delay (2.09e+03), air time(2.40e+02), and distance(-2.21+e02). This indicates the features departure delay, air time, and distance affect the target varialble arrival delay most significantly. 
-
 ## Discussion <br/>
 - Data Preprocessing: <br/>
 
@@ -285,9 +278,15 @@ The dataframe has 5819079 rows × 10 columns at this point. Six of features “M
 
 &emsp;For Lasso Regression, parameters “selection”  and “alpha” (controlling the strength of regularization). Alpha around 0.01 has the best performance based on approaches, and selection is selected as “random” to have a more randomized training model. For Ridge Regression,  it has similar accuracy compared to Lasso Regression. Meanwhile, the parameters do not influence the accuracy as much as Lasso Regression. The “solver” is chosen as “sag”, which is based on Stochastic Average Gradient descent since the dataset has been scaled in preprocessing part.
 
-- Results analysis: <br/> 
-
+## Results <br/>
 &emsp;Overall the best model we achieved is Lasso Regression and Ridge Regression. The testing error in around 143 to 148. Back to the context for prediction, the error indicates the model predict arrival delay in about 11-13 minutes. 
+
+- Result Analysis:
+&emsp;We create four models for this dataset. The first one is linear regression with SGD. The testing error is 224.7 and the model score is 0.85. The features air time, distance, and departure delay hold the largest three weight magnitude. The second model we choose is the polynominal regression. We set the degree equals to 3. Now, the testing MSE error reduces to 131.64. 
+
+&emsp;We then choose Lasso regession with and without random selection to train and test our dataset. The testing MSE errors are 145.9 and 194.7 respectively. The model scores are 0.90 and 0.87 respectively. We think the Lasso regression with random selection model had a good performance on predicting. But we run Ridge regression to see if it performs better than the previous ones. 
+
+&emsp;The testing MSE error for Ridge regression is 144.6 and the accuracy score is 0.904. We think this model has the best performance and choose its reuslts as the final results. We print out the model weights for all features and find the biggest three weights by comparing their magnitudes. The corresponding features are departure delay (2.09e+03), air time(2.40e+02), and distance(-2.21+e02). This indicates the features departure delay, air time, and distance affect the target varialble arrival delay most significantly. 
 
 - Possibly frauts / short-comings: <br/>
 
