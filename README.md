@@ -307,7 +307,9 @@ Blue scatterplot indicates departure_delay. Orange indicates the airtime and gre
 &emsp;Another of the main editions could be applied to a slightly different classification question “Will the flight delay” instead of “how long will the flight delay”. It can also bring more dimensions of attributes with attributes “canceled” and “diverted”. Some thresholds could be adjusted to determine delay or not or slight delay. And more models could be approached.
  
 ## Collaboration:
-Zhaolin Zhong & Shang Wu: Lead the teamwork and went through the entire procedure of this project (from topic selection, data exploration, preprocessing, and model training.) Shang Wu focuses more on the figures display and explanation and Zhaolin works more on the model(parameters) selections. Write most parts of the README file together. 
+Zhaolin Zhong: Lead the teamwork and went through the entire procedure of this project (from topic selection, data exploration, preprocessing, and model training.) Works more on the model(parameters) selections. Write most parts of the README file with Shang Wu together. 
+
+Shang Wu: Lead the teamwork and went through the entire procedure of this project (from topic selection, data exploration, preprocessing, and model training.) Focuses more on the figures display and explanation. Write most parts of the README file with Zhaolin together. 
 
 Xueqi Zhang: Work on data selection and preprocessing of dropping unrelated features. Discuss with data selection and the purpose of the project.
 
