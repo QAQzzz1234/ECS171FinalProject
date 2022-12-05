@@ -36,14 +36,11 @@ plt.show()
 
 
 
-We also scatter plot the three most significant features that influence the target variable arrival delay by first printing out all model weights. 
+We also scatter plot the three most significant features that influence the target variable arrival delay by first printing out all model weights. This is from the SGDRegressor. 
 ```python
-print("Most Relvant Features")
-plt.figure(figsize=(7, 7))
-sns.scatterplot(X_train["DEPARTURE_DELAY"], y_train)
 sns.scatterplot(X_train["AIR_TIME"], y_train)
 sns.scatterplot(X_train["DISTANCE"], y_train)
-plt.show()
+sns.scatterplot(X_train["DEPARTURE_DELAY"], y_train)
 ```
 ![scatterplot_three_features](https://user-images.githubusercontent.com/84880988/205522548-4a6454fb-d7fe-4437-984d-97f24215d487.png)
 
@@ -289,6 +286,9 @@ The dataframe has 5819079 rows × 10 columns at this point. Six of features “M
 &emsp;We then choose Lasso regession with and without random selection to train and test our dataset. The testing MSE errors are 145.9 and 194.7 respectively. The model scores are 0.90 and 0.87 respectively. We think the Lasso regression with random selection model had a good performance on predicting. But we run Ridge regression to see if it performs better than the previous ones. 
 
 &emsp;The testing MSE error for Ridge regression is 144.6 and the accuracy score is 0.904. We think this model has the best performance and choose its reuslts as the final results. We print out the model weights for all features and find the biggest three weights by comparing their magnitudes. The corresponding features are departure delay (2.09e+03), air time(2.40e+02), and distance(-2.21+e02). This indicates the features departure delay, air time, and distance affect the target varialble arrival delay most significantly. 
+
+Graph of the highest three weight corresponds to attribute Departure delay, airtime and distance. (Ridge Regression)
+![scatterplot_three_features](https://user-images.githubusercontent.com/84880988/205522548-4a6454fb-d7fe-4437-984d-97f24215d487.png)
 
 - Possibly frauts / short-comings: <br/>
 
