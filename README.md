@@ -253,7 +253,7 @@ print("Accuracy score: ",z)
 ## Discussion <br/>
 
 *Notes: To see the results and graphs, please view the Juypter Notebook "Final_Project_Full_Path.ipynb"
-- Data Preprocessing: <br/>
+ ####Data Preprocessing: <br/>
 
 &emsp;The very first part of this project is to extract the features that relates to the main purpose of this project (predict the ARRIVAL_DELAY). So the data set of “airlines” and “airports” are not selected to use. All the features in “flights” data that are unrelated with predicting is dropped in the first place. For example, “weather_delay”, “late_airport_dealy”, “cancelled” and “diverted”. These features indicates either not delaying or reasons of delaying. The “YEAR” is dropped since all data are collected from 2015. <br/>
 
@@ -265,7 +265,7 @@ The dataframe has 5819079 rows × 10 columns at this point. Six of features “M
 &emsp;Only three features include NAN Values, “ARRIVAL_DELAY”, “DEPARTURE_DELAY”, “AIR_TIME”. For the first two, NAN Values indicates there is no delay happening, and the cell is filled by 0.  For “AIR_TIME”, NAN values indicates either “diverted” or “canceld”, these samples are dropped. Compare to the overall amount of samples, 0.18%  of samples are dropped, and have a small impact. <br/>
 
 
-- Model Selection and Training: <br/>
+ ####Model Selection and Training: <br/>
 
 &emsp;Model training starts by splitting test and training data, we started spliting the test_size of 10%. While the testing error  is much higher than the training error, which indicates overfitting condition. The final splitting rate applied is 20:80 which has the most stable errors. Note we have a very big data-set that training all dataset takes a very long time and could lead to RAM fulfilled on the system. Hence, some part of samples are extrated from random select function (built in pandas), 10% of data is extrated and the training size 457120.Since the goal is to predict the value of “ARRIVAL_DELAY”, it is set use the target.
 
@@ -277,7 +277,7 @@ The dataframe has 5819079 rows × 10 columns at this point. Six of features “M
 
 &emsp;For Lasso Regression, parameters “selection”  and “alpha” (controlling the strength of regularization). Alpha around 0.01 has the best performance based on approaches, and selection is selected as “random” to have a more randomized training model. For Ridge Regression,  it has similar accuracy compared to Lasso Regression. Meanwhile, the parameters do not influence the accuracy as much as Lasso Regression. The “solver” is chosen as “sag”, which is based on Stochastic Average Gradient descent since the dataset has been scaled in preprocessing part.
 
-- Result Analysis:
+ ####Result Analysis:
 
 &emsp;Overall the best model we achieved is Lasso Regression and Ridge Regression. The testing error in around 143 to 148. Back to the context for prediction, the error indicates the model predict arrival delay in about 11-13 minutes. 
 
@@ -292,7 +292,7 @@ Blue scatterplot indicates departure_delay. Orange indicates the airtime and gre
 
 ![scatterplot_three_features](https://user-images.githubusercontent.com/84880988/205522548-4a6454fb-d7fe-4437-984d-97f24215d487.png)
 
-- Possibly frauts / short-comings: <br/>
+ ####Possibly frauts / short-comings: <br/>
 
 &emsp;The original selected data contains a huge amount of samples, so the model can be only built on part of it based on the machine’s limit. It would be better to randomly extract a larger portion from the original dataset. 
 
