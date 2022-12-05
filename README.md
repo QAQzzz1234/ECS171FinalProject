@@ -288,8 +288,8 @@ The dataframe has 5819079 rows × 10 columns at this point. Six of features “M
 &emsp;The testing MSE error for Ridge regression is 144.6 and the accuracy score is 0.904. We think this model has the best performance and choose its reuslts as the final results. We print out the model weights for all features and find the biggest three weights by comparing their magnitudes. The corresponding features are departure delay (2.09e+03), air time(2.40e+02), and distance(-2.21+e02). This indicates the features departure delay, air time, and distance affect the target varialble arrival delay most significantly. 
 
 Graph of the highest three weight corresponds to attribute Departure delay, airtime and distance. (Ridge Regression)
-
 Blue scatterplot indicates departure_delay. Orange indicates the airtime and green indicates distance, these two are high correlated.
+
 ![scatterplot_three_features](https://user-images.githubusercontent.com/84880988/205522548-4a6454fb-d7fe-4437-984d-97f24215d487.png)
 
 - Possibly frauts / short-comings: <br/>
