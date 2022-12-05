@@ -278,10 +278,10 @@ The dataframe has 5819079 rows × 10 columns at this point. Six of features “M
 
 &emsp;For Lasso Regression, parameters “selection”  and “alpha” (controlling the strength of regularization). Alpha around 0.01 has the best performance based on approaches, and selection is selected as “random” to have a more randomized training model. For Ridge Regression,  it has similar accuracy compared to Lasso Regression. Meanwhile, the parameters do not influence the accuracy as much as Lasso Regression. The “solver” is chosen as “sag”, which is based on Stochastic Average Gradient descent since the dataset has been scaled in preprocessing part.
 
-## Results <br/>
+- Result Analysis:
+
 &emsp;Overall the best model we achieved is Lasso Regression and Ridge Regression. The testing error in around 143 to 148. Back to the context for prediction, the error indicates the model predict arrival delay in about 11-13 minutes. 
 
-- Result Analysis:
 &emsp;We create four models for this dataset. The first one is linear regression with SGD. The testing error is 224.7 and the model score is 0.85. The features air time, distance, and departure delay hold the largest three weight magnitude. The second model we choose is the polynominal regression. We set the degree equals to 3. Now, the testing MSE error reduces to 131.64. 
 
 &emsp;We then choose Lasso regession with and without random selection to train and test our dataset. The testing MSE errors are 145.9 and 194.7 respectively. The model scores are 0.90 and 0.87 respectively. We think the Lasso regression with random selection model had a good performance on predicting. But we run Ridge regression to see if it performs better than the previous ones. 
