@@ -316,6 +316,6 @@ Xueqi Zhang: Work on data selection and preprocessing of dropping unrelated feat
 
 Kejing Chen: Work on data selection and collect errors from each regression model. 
 
-Huaiyu Jiang:  Create ad organize the GitHub repository. Discussed data exploration and model selection. Proofread README file and work on Conclusions.
+Huaiyu Jiang:  Create ad organize the GitHub repository. Work on data selection and preprocessing. Discussed data exploration and model selection. Proofread README file and work on Conclusions.
 
 
